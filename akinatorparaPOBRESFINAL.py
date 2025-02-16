@@ -59,7 +59,7 @@ def adivinar():
             else:
                 print("No se pudo clasificar el objeto.")
         else:
-            respuesta = input("5. ¿Es un material? (si/no): ").strip().lower()
+            respuesta = input("5. ¿Es intangible? (si/no): ").strip().lower()
             if respuesta == "si":
                 respuesta = input("6. ¿Es una Elemento? (si/no): ").strip().lower()
                 
@@ -81,7 +81,7 @@ def adivinar():
                         print("Estás pensando en un Compuesto Inorgánico (Ej: Agua H₂O, Sal NaCl).")
                 
                 elif respuesta == "si":
-                    respuesta = input("¿7. Es homogénea o heterogénea? (si/no): ").strip().lower()
+                    respuesta = input("7. ¿ Es homogénea o heterogénea? (si/no): ").strip().lower()
                     if respuesta == "si":
                         respuesta = input("8. ¿Es una solución metálica? (si/no): ").strip().lower()
                         if respuesta == "si":
@@ -99,15 +99,15 @@ def adivinar():
                     print("Estás pensando en un material complejo o de clasificación especial.")
             else:
                 # Clasificación por origen
-                respuesta = input("8. ¿Se obtiene de la tierra? (si/no): ").strip().lower()
+                respuesta = input("6. ¿Se obtiene de la tierra? (si/no): ").strip().lower()
                 if respuesta == "si":
-                    respuesta = input("9. ¿Se produce de manera artificial? (si/no): ").strip().lower()
+                    respuesta = input("7. ¿Se produce de manera artificial? (si/no): ").strip().lower()
                     if respuesta == "si":
                         print("Estás pensando en un Combustible.")
                     else:
                         print("Estás pensando en un Recurso Geológico (como minerales o rocas).")
                 else:
-                    respuesta = input("¿El fenómeno ocurre en la Tierra? (si/no): ").strip().lower()
+                    respuSesta = input("9. ¿El fenómeno ocurre en la Tierra? (si/no): ").strip().lower()
                     if respuesta == "si":
                         respuesta = input("10. ¿Causa catástrofes? (si/no): ").strip().lower()
                         if respuesta == "si":
