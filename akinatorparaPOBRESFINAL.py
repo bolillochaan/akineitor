@@ -39,7 +39,7 @@ def adivinar():
             else:
                 print("Estás pensando en otro ser vivo, como una bacteria u hongo.")
     else:
-        respuesta = input("4. ¿Es un objeto? (si/no): ").strip().lower()
+        respuesta = input("2. ¿Es un objeto? (si/no): ").strip().lower()
         if respuesta == "si":
             respuesta = input("¿Cómo lo quieres clasificar? (funcion/material/tamaño/uso/caracteristicas/valor/categoria): ").strip().lower()
             if respuesta == "funcion":
@@ -72,9 +72,9 @@ def adivinar():
                         print("Estás pensando en un Elemento Sintético (Ej: Plutonio Pu, Americio Am).")
                 
                 elif respuesta == "no":
-                    respuesta = input("¿6. Es compuesto? (si/no): ").strip().lower()
-                    if respuesta == "no":
-                     respuesta = input("¿7. Es orgánico o inorgánico? (si/no): ").strip().lower()
+                    respuesta = input("7. ¿ Es compuesto? (si/no): ").strip().lower()
+                    if respuesta == "si":
+                     respuesta = input("8. ¿Es orgánico? (si/no): ").strip().lower()
                     if respuesta == "si":
                         print("Estás pensando en un Compuesto Orgánico (Ej: Glucosa C₆H₁₂O₆, Etanol C₂H₅OH).")
                     else:
@@ -127,6 +127,5 @@ def adivinar():
                     else:
                         print("Estás pensando en un Fenómeno Extraterrestre (auroras boreales, lluvias de meteoros).")
 
-    print("No estoy seguro de qué estás pensando, pero seguro es algo interesante.")
 
 adivinar()
