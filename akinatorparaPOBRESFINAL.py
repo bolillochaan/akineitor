@@ -99,9 +99,9 @@ def adivinar():
                     print("Estás pensando en un material complejo o de clasificación especial.")
             else:
                 # Clasificación por origen
-                respuesta = input("¿Se obtiene de la tierra? (si/no): ").strip().lower()
+                respuesta = input("8. ¿Se obtiene de la tierra? (si/no): ").strip().lower()
                 if respuesta == "si":
-                    respuesta = input("¿Se produce de manera artificial? (si/no): ").strip().lower()
+                    respuesta = input("9. ¿Se produce de manera artificial? (si/no): ").strip().lower()
                     if respuesta == "si":
                         print("Estás pensando en un Combustible.")
                     else:
@@ -109,17 +109,17 @@ def adivinar():
                 else:
                     respuesta = input("¿El fenómeno ocurre en la Tierra? (si/no): ").strip().lower()
                     if respuesta == "si":
-                        respuesta = input("¿Causa catástrofes? (si/no): ").strip().lower()
+                        respuesta = input("10. ¿Causa catástrofes? (si/no): ").strip().lower()
                         if respuesta == "si":
                             print("Estás pensando en un Fenómeno Climático (huracanes, terremotos).")
                         else:
-                            respuesta = input("¿Es un campo de estudio científico? (si/no): ").strip().lower()
+                            respuesta = input("11. ¿Es un campo de estudio científico? (si/no): ").strip().lower()
                             if respuesta == "si":
-                                respuesta = input("¿Es una fuerza fundamental? (si/no): ").strip().lower()
+                                respuesta = input("12. ¿Es una fuerza fundamental? (si/no): ").strip().lower()
                                 if respuesta == "si":
                                     print("Estás pensando en una Fuerza Natural (gravedad, magnetismo).")
                                 else:
-                                    respuesta = input("¿Se manifiesta como vibración o pulsación? (si/no): ").strip().lower()
+                                    respuesta = input("13. ¿Se manifiesta como vibración o pulsación? (si/no): ").strip().lower()
                                     if respuesta == "si":
                                         print("Estás pensando en Ondas (sonoras, electromagnéticas, sísmicas).")
                                     else:
