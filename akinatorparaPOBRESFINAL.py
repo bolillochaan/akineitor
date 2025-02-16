@@ -59,73 +59,83 @@ def adivinar():
             else:
                 print("No se pudo clasificar el objeto.")
         else:
-            respuesta = input("5. ¿Es intangible? (si/no): ").strip().lower()
+          respuesta = input("5. ¿Es intangible? (si/no): ").strip().lower()
+    if respuesta == "si":
+        respuesta = input("6. ¿Es creación humana? (si/no): ").strip().lower()
+        if respuesta == "si":
+            respuesta = input("7. ¿Es entretenimiento audiovisual? (si/no): ").strip().lower()
             if respuesta == "si":
-                respuesta = input("6. ¿Es una Elemento? (si/no): ").strip().lower()
-                
+                respuesta = input("8. ¿Es animación? (si/no): ").strip().lower()
                 if respuesta == "si":
-                    respuesta = input("7. ¿Es de origen natural? (si/no): ").strip().lower()
-
-                    if respuesta == "si":
-                        print("Estás pensando en un Elemento Natural (Ej: Oro Au, Oxígeno O, Carbono C).")
-                    else:
-                        print("Estás pensando en un Elemento Sintético (Ej: Plutonio Pu, Americio Am).")
-                
-                elif respuesta == "no":
-                    respuesta = input("7. ¿ Es compuesto? (si/no): ").strip().lower()
-                    if respuesta == "si":
-                     respuesta = input("8. ¿Es orgánico? (si/no): ").strip().lower()
-                    if respuesta == "si":
-                        print("Estás pensando en un Compuesto Orgánico (Ej: Glucosa C₆H₁₂O₆, Etanol C₂H₅OH).")
-                    else:
-                        print("Estás pensando en un Compuesto Inorgánico (Ej: Agua H₂O, Sal NaCl).")
-                
-                elif respuesta == "si":
-                    respuesta = input("7. ¿ Es homogénea o heterogénea? (si/no): ").strip().lower()
-                    if respuesta == "si":
-                        respuesta = input("8. ¿Es una solución metálica? (si/no): ").strip().lower()
-                        if respuesta == "si":
-                            print("Estás pensando en una Aleación (Ej: Acero [Fe+C], Bronce [Cu+Sn]).")
-                        else:
-                            print("Estás pensando en una Mezcla Homogénea (Ej: Aire, Agua de mar).")
-                    else:
-                        respuesta = input("¿9. Sus componentes son visibles? (si/no): ").strip().lower()
-                        if respuesta == "si":
-                            print("Estás pensando en una Mezcla Heterogénea (Ej: Granito, Ensalada).")
-                        else:
-                            print("Estás pensando en un Coloide (Ej: Gelatina, Mayonesa).")
-                
+                    print("¡Es un Anime!")
                 else:
-                    print("Estás pensando en un material complejo o de clasificación especial.")
+                    respuesta = input("9. ¿Es contenido para adultos? (si/no): ").strip().lower()
+                    print("¡Es una Serie!" if respuesta == "si" else "¡Es una Película!")
             else:
-                # Clasificación por origen
-                respuesta = input("6. ¿Se obtiene de la tierra? (si/no): ").strip().lower()
+                respuesta = input("7. ¿Es producción musical? (si/no): ").strip().lower()
                 if respuesta == "si":
-                    respuesta = input("7. ¿Se produce de manera artificial? (si/no): ").strip().lower()
-                    if respuesta == "si":
-                        print("Estás pensando en un Combustible.")
-                    else:
-                        print("Estás pensando en un Recurso Geológico (como minerales o rocas).")
+                    print("¡Es Música!")
                 else:
-                    respuSesta = input("9. ¿El fenómeno ocurre en la Tierra? (si/no): ").strip().lower()
+                    respuesta = input("8. ¿Es arte literario? (si/no): ").strip().lower()
+                    print("¡Es un Libro/Novela!" if respuesta == "si" else "¡Es Poesía u obra dramática!")
+        else:
+            print("¡Es un fenómeno natural intangible como una aurora boreal o sonido ambiental!")
+    
+    else:
+        # Sección corregida
+        respuesta = input("6. ¿Es un material? (si/no): ").strip().lower()
+        if respuesta == "si":
+            respuesta = input("7. ¿Es una Elemento? (si/no): ").strip().lower()
+            
+            if respuesta == "si":
+                respuesta = input("8. ¿Es de origen natural? (si/no): ").strip().lower()
+                if respuesta == "si":
+                    print("Elemento Natural (Ej: Oro Au, Oxígeno O)")
+                else:
+                    print("Elemento Sintético (Ej: Plutonio Pu)")
+            
+            else:
+                respuesta = input("7. ¿Es compuesto? (si/no): ").strip().lower()
+                if respuesta == "si":
+                    respuesta = input("8. ¿Es orgánico? (si/no): ").strip().lower()
+                    print("Compuesto Orgánico" if respuesta == "si" else "Compuesto Inorgánico")
+                else:
+                    respuesta = input("8. ¿Es mezcla homogénea? (si/no): ").strip().lower()
                     if respuesta == "si":
-                        respuesta = input("10. ¿Causa catástrofes? (si/no): ").strip().lower()
-                        if respuesta == "si":
-                            print("Estás pensando en un Fenómeno Climático (huracanes, terremotos).")
-                        else:
-                            respuesta = input("11. ¿Es un campo de estudio científico? (si/no): ").strip().lower()
-                            if respuesta == "si":
-                                respuesta = input("12. ¿Es una fuerza fundamental? (si/no): ").strip().lower()
-                                if respuesta == "si":
-                                    print("Estás pensando en una Fuerza Natural (gravedad, magnetismo).")
-                                else:
-                                    respuesta = input("13. ¿Se manifiesta como vibración o pulsación? (si/no): ").strip().lower()
-                                    if respuesta == "si":
-                                        print("Estás pensando en Ondas (sonoras, electromagnéticas, sísmicas).")
-                                    else:
-                                        print("Estás pensando en una Forma de Energía (cinética, térmica).")
+                        respuesta = input("9. ¿Es aleación? (si/no): ").strip().lower()
+                        print("Aleación metálica" if respuesta == "si" else "Mezcla homogénea")
                     else:
-                        print("Estás pensando en un Fenómeno Extraterrestre (auroras boreales, lluvias de meteoros).")
+                        print("Mezcla heterogénea o coloide")
+        
+        else:
+            # Sección de fenómenos corregida
+            respuesta = input("6. ¿Se obtiene de la tierra? (si/no): ").strip().lower()
+            if respuesta == "si":
+                respuesta = input("7. ¿Se produce de manera artificial? (si/no): ").strip().lower()
+                if respuesta == "si":
+                    print("Estás pensando en un Combustible.")
+                else:
+                    print("Estás pensando en un Recurso Geológico (como minerales o rocas).")
+            else:
+                respuesta = input("8. ¿El fenómeno ocurre en la Tierra? (si/no): ").strip().lower()
+                if respuesta == "si":
+                    respuesta = input("9. ¿Causa catástrofes? (si/no): ").strip().lower()
+                    if respuesta == "si":
+                        print("Estás pensando en un Fenómeno Climático (huracanes, terremotos).")
+                    else:
+                        respuesta = input("10. ¿Es un campo de estudio científico? (si/no): ").strip().lower()
+                        if respuesta == "si":
+                            respuesta = input("11. ¿Es una fuerza fundamental? (si/no): ").strip().lower()
+                            if respuesta == "si":
+                                print("Estás pensando en una Fuerza Natural (gravedad, magnetismo).")
+                            else:
+                                respuesta = input("12. ¿Se manifiesta como vibración o pulsación? (si/no): ").strip().lower()
+                                if respuesta == "si":
+                                    print("Estás pensando en Ondas (sonoras, electromagnéticas, sísmicas).")
+                                else:
+                                    print("Estás pensando en una Forma de Energía (cinética, térmica).")
+                else:
+                    print("Estás pensando en un Fenómeno Extraterrestre (auroras boreales, lluvias de meteoros).")
 
 
 adivinar()
