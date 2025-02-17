@@ -145,7 +145,7 @@ def adivinar():
                         #CONTENIDO DE ENTRETENIMIENTO
                         respuesta = input("6. ¿Es entretenimiento audiovisual? ").strip().lower()
                         if respuesta == "si":
-                            respuesta = input("7. ¿Es animación? ").strip().lower()
+                            respuesta = input("7. ¿Es de animación japonesa? ").strip().lower()
                             if respuesta == "si":
                                 print("¡Es un Anime!")
                             else:
@@ -156,8 +156,8 @@ def adivinar():
                             if respuesta == "si":
                                 print("¡Es Música!")
                             else:
-                                respuesta = input("7. ¿Es arte literario? ").strip().lower()
-                                print("¡Es un Libro/Novela!" if respuesta == "si" else "¡Es Poesía u obra dramática!")
+                                respuesta = input("7. ¿Es texto que narra alguna historia? ").strip().lower()
+                                print("¡Es un Libro, Novela u obra dramática!" if respuesta == "si" else "¡Es una Poesía!")
                 else:
                     print("¡Estás pensando en alguna religión!")
             else:
