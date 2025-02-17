@@ -118,8 +118,8 @@ def adivinar():
                             respuesta = input("6. ¿Es arte digital o realidad virtual? (hologramas, dispositivos VR) ").strip().lower()
                             print("¡Es arte digital o tecnología de realidad virtual!" if respuesta == "si" else "Es otro tipo de tecnología especializada")
             else:
-                respuesta = input("4. ¿Es una herramienta? (Facilita un trabajo) ").strip().lower()
-                if respuesta == "si":
+                              respuesta = input("4. ¿Es una herramienta? (Facilita una actividad) ").strip().lower()
+            if respuesta == "si":
                     respuesta = input("5. ¿Lo utilizas en la oficina? ").strip().lower()
                     if respuesta == "si":
                         print("Es una herramienta de oficina.")
@@ -135,29 +135,46 @@ def adivinar():
                                 respuesta = input("8. ¿Te puedes transportar en él? ").strip().lower()
                                 if respuesta == "si":
                                     print("Es un Medio de Transporte.")
+                                    return
                                 else:
-                                    respuesta = input("8. ¿Lo ocupas en la cocina? ").strip().lower()
-                                if respuesta == "si":
+                                    respuesta = input("9. ¿Lo ocupas en la cocina? ").strip().lower()
+                                    if respuesta == "si":
                                         print("Es una herramienta de cocina (cuchillo, batidoras, etc).")
-                                else:
-                                 respuesta = input("9. ¿Es un arma o instrumento de defensa? (espadas, misiles, equipamiento bélico) ").strip().lower()
-                                if respuesta == "si":
-                                    print("Es un arma o equipo bélico!" if respuesta == "si" else "Es un herramienta de construcción")
-    
-                else:
+                                    else:
+                                        respuesta = input("10. ¿Es un arma o instrumento de defensa? (espadas, misiles, equipamiento bélico) ").strip().lower()
+                                        if respuesta == "si":
+                                            print("Es un arma o equipo bélico!")
+                                        else:
+                                            print("Es una herramienta de construcción")
+            else:
+                    # NUEVA SECCIÓN PARA CUERPOS CELESTES
+                    respuesta = input("5. ¿Es un cuerpo celeste? (planetas, estrellas, asteroides) ").strip().lower()
                     if respuesta == "si":
-                        respuesta = input("5. ¿Es un utencilio? ").strip().lower()
-                        if respuesta == "si":
-                            respuesta = input("6. ¿Lo ocupas en la oficina? ").strip().lower()
+                            respuesta = input("6. ¿Es un planeta? ").strip().lower()
                             if respuesta == "si":
-                                print("Es utencilio de oficina (boligrafo, pápel, lapiz, etc)")
+                             print("¡Estás pensando en un planeta!")
+                             return
                             else:
-                                respuesta = input("7. ¿Lo ocupas en la cocina? ").strip().lower()
-                                if respuesta == "si":
-                                    print("Es utencilio de cocina (cuchara, plato, etc)")
-                                else:
-                                    respuesta = input("8. ¿Lo ocupas para limpar algo o limpiarte? ").strip().lower()
-                                    print("Es utencilio de limpieza" if respuesta == "si" else "Es un utincilio de jardinería")
+                             respuesta = input("7. ¿Es una estrella? ").strip().lower()
+                            if respuesta == "si":
+                                print("¡Es una estrella!")
+                                return
+                            else:
+                                 print("¡Es otro cuerpo celeste!")
+                                 return
+                    else:
+                        respuesta = input("5. ¿Es un utencilio? ").strip().lower()
+                    if respuesta == "si":
+                        respuesta = input("6. ¿Lo ocupas en la oficina? ").strip().lower()
+                        if respuesta == "si":
+                            print("Es utencilio de oficina (boligrafo, pápel, lapiz, etc)")
+                        else:
+                            respuesta = input("7. ¿Lo ocupas en la cocina? ").strip().lower()
+                            if respuesta == "si":
+                                print("Es utencilio de cocina (cuchara, plato, etc)")
+                            else:
+                                respuesta = input("8. ¿Lo ocupas para limpar algo o limpiarte? ").strip().lower()
+                                print("Es utencilio de limpieza" if respuesta == "si" else "Es un utincilio de jardinería")
                     else:
                         respuesta = input("9. ¿Es para el hogar o vestimenta? ").strip().lower()
                         if respuesta == "si":
@@ -233,9 +250,7 @@ def adivinar():
                                         print("¡Es inteligencia artificial!" if respuesta == "si" else "¡Es otra tecnología digital avanzada!")
                             else:
                                 respuesta = input("8. ¿Es texto que narra alguna historia? ").strip().lower()
-                                print("¡Es un Libro, Novela u obra dramática!" if respuesta == "si" else "¡Es una Poesía!")
-                else:
-                    print("¡Estás pensando en alguna religión!")
+                                print("¡Es un Libro, Novela u obra dramática!" if respuesta == "si" else "¡Es una Poesía!")  
             else:
                 # Rama de materiales y fenómenos
                 respuesta = input("4. ¿Es un material? ").strip().lower()
@@ -282,6 +297,15 @@ def adivinar():
                                         respuesta = input("9. ¿Se manifiesta como vibración o pulsación? ").strip().lower()
                                         print("Estás pensando en Ondas (sonoras, electromagnéticas, sísmicas)." if respuesta == "si" else "Estás pensando en una Forma de Energía (cinética, térmica).")
                         else:
-                            print("Estás pensando en un Fenómeno Extraterrestre (auroras boreales, lluvias de meteoros).")
-
+                            # Sección de fenómenos extraterrestres
+                            respuesta = input("7. ¿Es un cuerpo celeste como un planeta? ").strip().lower()
+                            if respuesta == "si":
+                                print("¡Estás pensando en un planeta!")
+                            else:
+                                respuesta = input("8. ¿Es un fenómeno luminoso? (auroras, meteoros) ").strip().lower()
+                                if respuesta == "si":
+                                    print("Estás pensando en un fenómeno extraterrestre luminoso!")
+                                else:
+                                    respuesta = input("9. ¿Es una formación estelar? (nebulosas, agujeros negros) ").strip().lower()
+                                    print("¡Es un fenómeno cósmico!" if respuesta == "si" else "¡Es un fenómeno extraterrestre no identificado!")
 adivinar()
