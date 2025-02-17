@@ -98,7 +98,7 @@ def adivinar():
         
         if respuesta == "si":
             # Categorización de objetos físicos
-            respuesta = input("3. ¿Es un dispositivo tecnológico? ").strip().lower()
+            respuesta = input("3. ¿Pertenece a la categoría de electrónica? ").strip().lower()
             
             if respuesta == "si":
                 # Subcategorías tecnológicas
@@ -137,12 +137,12 @@ def adivinar():
                                     print("Es un Medio de Transporte.")
                                 else:
                                     respuesta = input("8. ¿Lo ocupas en la cocina? ").strip().lower()
-                            if respuesta == "si":
-                                    print("Es una herramienta de cocina (cuchillo, batidoras, etc).")
-                            else:
-                                respuesta = input("9. ¿Es un arma o instrumento de defensa? (espadas, misiles, equipamiento bélico) ").strip().lower()
-                    if respuesta == "si":
-                        print("Es un arma o equipo bélico!" if respuesta == "si" else "Es un herramienta de construcción")
+                                if respuesta == "si":
+                                        print("Es una herramienta de cocina (cuchillo, batidoras, etc).")
+                                else:
+                                 respuesta = input("9. ¿Es un arma o instrumento de defensa? (espadas, misiles, equipamiento bélico) ").strip().lower()
+                                if respuesta == "si":
+                                    print("Es un arma o equipo bélico!" if respuesta == "si" else "Es un herramienta de construcción")
     
                 else:
                     if respuesta == "si":
