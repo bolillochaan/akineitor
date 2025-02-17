@@ -222,8 +222,17 @@ def adivinar():
                             respuesta = input("6. ¿Es de producción musical? ").strip().lower()
                             if respuesta == "si":
                                 print("¡Es Música!")
+                            # NUEVA CATEGORÍA AÑADIDA AQUÍ
+                                respuesta = input("8. ¿Está relacionado con tecnología digital? ").strip().lower()
+                                if respuesta == "si":
+                                    respuesta = input("9. ¿Es un lenguaje de programación o herramienta de desarrollo? (Ej: Python, Git) ").strip().lower()
+                                    if respuesta == "si":
+                                        print("¡Es un lenguaje de programación o herramienta de desarrollo!")
+                                    else:
+                                        respuesta = input("10. ¿Es un sistema de inteligencia artificial? (redes neuronales, machine learning) ").strip().lower()
+                                        print("¡Es inteligencia artificial!" if respuesta == "si" else "¡Es otra tecnología digital avanzada!")
                             else:
-                                respuesta = input("7. ¿Es texto que narra alguna historia? ").strip().lower()
+                                respuesta = input("8. ¿Es texto que narra alguna historia? ").strip().lower()
                                 print("¡Es un Libro, Novela u obra dramática!" if respuesta == "si" else "¡Es una Poesía!")
                 else:
                     print("¡Estás pensando en alguna religión!")
