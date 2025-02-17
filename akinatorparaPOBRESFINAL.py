@@ -1,6 +1,6 @@
 def adivinar():
     print("¡Adivinaré lo que estás pensando! Pero modérate, tampoco exageres")
-    print("Responde con 'si', 'no' o 'no lo sé'.\n")
+    print("Responde con 'si', 'no'.\n")
 
     # Primera pregunta base
     respuesta = input("1. ¿Es algo vivo? ").strip().lower()
@@ -129,29 +129,37 @@ def adivinar():
                             print("Estás pensando en una herramienta o utensilio.")
                 else:
                     print("Estás pensando en un objeto físico menos común.")
+       
+       
+       #Rama de INTANGIBLES
         else:
-            # Rama de intangibles
+ 
             respuesta = input("3. ¿Es intangible? ").strip().lower()
             if respuesta == "si":
                 respuesta = input("4. ¿Es creación humana? ").strip().lower()
                 if respuesta == "si":
-                    respuesta = input("5. ¿Es entretenimiento audiovisual? ").strip().lower()
+                    respuesta = input("5. ¿Es un acontecimiento? ").strip().lower()
                     if respuesta == "si":
-                        respuesta = input("6. ¿Es animación? ").strip().lower()
-                        if respuesta == "si":
-                            print("¡Es un Anime!")
-                        else:
-                            respuesta = input("7. ¿El contenido que se divide en capítulos? ").strip().lower()
-                            print("¡Es una Serie!" if respuesta == "si" else "¡Es una Película!")
+                        print("¡Es una festividad!")
                     else:
-                        respuesta = input("5. ¿Es de producción musical? ").strip().lower()
+                        #CONTENIDO DE ENTRETENIMIENTO
+                        respuesta = input("6. ¿Es entretenimiento audiovisual? ").strip().lower()
                         if respuesta == "si":
-                            print("¡Es Música!")
+                            respuesta = input("7. ¿Es animación? ").strip().lower()
+                            if respuesta == "si":
+                                print("¡Es un Anime!")
+                            else:
+                                respuesta = input("8. ¿El contenido se divide en capítulos? ").strip().lower()
+                                print("¡Es una Serie!" if respuesta == "si" else "¡Es una Película!")
                         else:
-                            respuesta = input("6. ¿Es arte literario? ").strip().lower()
-                            print("¡Es un Libro/Novela!" if respuesta == "si" else "¡Es Poesía u obra dramática!")
+                            respuesta = input("6. ¿Es de producción musical? ").strip().lower()
+                            if respuesta == "si":
+                                print("¡Es Música!")
+                            else:
+                                respuesta = input("7. ¿Es arte literario? ").strip().lower()
+                                print("¡Es un Libro/Novela!" if respuesta == "si" else "¡Es Poesía u obra dramática!")
                 else:
-                    print("¡Es un fenómeno natural intangible como una aurora boreal o sonido ambiental!")
+                    print("¡Estás pensando en alguna religión!")
             else:
                 # Rama de materiales y fenómenos
                 respuesta = input("4. ¿Es un material? ").strip().lower()
@@ -181,11 +189,15 @@ def adivinar():
                         respuesta = input("5. ¿Se produce de manera artificial? ").strip().lower()
                         print("Estás pensando en un Combustible." if respuesta == "si" else "Estás pensando en un Recurso Geológico (como minerales o rocas).")
                     else:
-                        respuesta = input("6. ¿El fenómeno ocurre en la Tierra? ").strip().lower()
+                        respuesta = input("6. ¿Ocurre en la Tierra? ").strip().lower()
                         if respuesta == "si":
-                            respuesta = input("7. ¿Causa catástrofes? ").strip().lower()
+                            respuesta = input("7. ¿Causa catástrofes naturales? ").strip().lower()
                             if respuesta == "si":
                                 print("Estás pensando en un Fenómeno Climático (huracanes, terremotos).")
+                            else:
+                                respuesta = input("8. ¿Puedes vacacionar, pasar el rato ahí ? ").strip().lower()
+                            if respuesta == "si":
+                                print("Estás pensando en un Lugar o País.")
                             else: 
                                 respuesta = input("8. ¿Es una fuerza fundamental? ").strip().lower()
                                 if respuesta == "si":
