@@ -69,7 +69,7 @@ def adivinar():
                 if respuesta == "si":
                     print("¡Es un Anime!")
                 else:
-                    respuesta = input("9. ¿Es contenido para adultos? (si/no): ").strip().lower()
+                    respuesta = input("9. ¿Es contenido que se divide en capitulos? (si/no): ").strip().lower()
                     print("¡Es una Serie!" if respuesta == "si" else "¡Es una Película!")
             else:
                 respuesta = input("7. ¿Es producción musical? (si/no): ").strip().lower()
@@ -82,7 +82,7 @@ def adivinar():
             print("¡Es un fenómeno natural intangible como una aurora boreal o sonido ambiental!")
     
     else:
-        # Sección corregida
+        # Sección de Tangibles
         respuesta = input("6. ¿Es un material? (si/no): ").strip().lower()
         if respuesta == "si":
             respuesta = input("7. ¿Es una Elemento? (si/no): ").strip().lower()
@@ -108,7 +108,7 @@ def adivinar():
                         print("Mezcla heterogénea o coloide")
         
         else:
-            # Sección de fenómenos corregida
+            # Sección de fenómenos
             respuesta = input("6. ¿Se obtiene de la tierra? (si/no): ").strip().lower()
             if respuesta == "si":
                 respuesta = input("7. ¿Se produce de manera artificial? (si/no): ").strip().lower()
@@ -122,7 +122,7 @@ def adivinar():
                     respuesta = input("9. ¿Causa catástrofes? (si/no): ").strip().lower()
                     if respuesta == "si":
                         print("Estás pensando en un Fenómeno Climático (huracanes, terremotos).")
-                    else:
+                    else: 
                         respuesta = input("10. ¿Es un campo de estudio científico? (si/no): ").strip().lower()
                         if respuesta == "si":
                             respuesta = input("11. ¿Es una fuerza fundamental? (si/no): ").strip().lower()
