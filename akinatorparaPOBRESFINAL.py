@@ -2,10 +2,10 @@ def adivinar():
     print("¡Adivinaré lo que estás pensando! Pero modérate, tampoco exageres")
     print("Responde con 'si', 'no'.\n")
 
-    # Primera pregunta base
     respuesta = input("1. ¿Es algo vivo? ").strip().lower()
+    
     if respuesta == "si":
-        # Rama de seres vivos
+        # Rama de seres vivos (sin cambios)
         respuesta = input("2. ¿Es un animal? ").strip().lower()
         if respuesta == "si":
             respuesta = input("3. ¿Es un vertebrado? ").strip().lower()
@@ -93,47 +93,114 @@ def adivinar():
                 print("Estás pensando en otro ser vivo, como un hongo o bacteria.")
 
     elif respuesta == "no":
-        # Rama de no vivos
+        # Rama de objetos no vivos
         respuesta = input("2. ¿Es un objeto físico? ").strip().lower()
+        
         if respuesta == "si":
-            respuesta = input("3. ¿Es algo tecnológico como un dispositivo electrónico? ").strip().lower()
+            # Categorización de objetos físicos
+            respuesta = input("3. ¿Es un dispositivo tecnológico? ").strip().lower()
+            
             if respuesta == "si":
-                respuesta = input("4. ¿Es portátil como un celular, una tablet o una laptop? ").strip().lower()
+                # Subcategorías tecnológicas
+                respuesta = input("4. ¿Es portátil? (celular, tablet, laptop) ").strip().lower()
                 if respuesta == "si":
-                    respuesta = input("5. ¿Es un celular? ").strip().lower()
-                    if respuesta == "si":
-                        print("Estás pensando en un celular.")
-                    else:
-                        print("Estás pensando en otro dispositivo portátil.")
+                    respuesta = input("5. ¿Es un smartphone? ").strip().lower()
+                    print("Es un celular." if respuesta == "si" else "Es otro dispositivo portátil")
                 else:
-                    respuesta = input("4. ¿Es una computadora? ").strip().lower()
+                    respuesta = input("4. ¿Es de uso doméstico? (TV, consola, electrodoméstico) ").strip().lower()
                     if respuesta == "si":
-                        print("Estás pensando en una computadora.")
+                        print("Es un dispositivo doméstico.")
                     else:
-                        respuesta = input("5. ¿Es una impresora? ").strip().lower()
+                        respuesta = input("5. ¿Está relacionado con tecnología espacial? (satélites, trajes espaciales) ").strip().lower()
                         if respuesta == "si":
-                            print("Estás pensando en una impresora.")
+                            print("¡Es tecnología espacial!")
                         else:
-                            print("Estás pensando en otro tipo de tecnología.")
+                            respuesta = input("6. ¿Es arte digital o realidad virtual? (hologramas, dispositivos VR) ").strip().lower()
+                            print("¡Es arte digital o tecnología de realidad virtual!" if respuesta == "si" else "Es otro tipo de tecnología especializada")
             else:
-                respuesta = input("3. ¿Es algo cotidiano como muebles, ropa o herramientas? ").strip().lower()
+                respuesta = input("4. ¿Es una herramienta? ").strip().lower()
                 if respuesta == "si":
-                    respuesta = input("4. ¿Es un mueble como una silla o una mesa? ").strip().lower()
+                    respuesta = input("5. ¿Lo utilizas en la oficina? ").strip().lower()
                     if respuesta == "si":
-                        print("Estás pensando en un mueble.")
+                        print("Es una herramienta de oficina.")
                     else:
-                        respuesta = input("5. ¿Es una prenda de ropa como una camisa o un pantalón? ").strip().lower()
+                        respuesta = input("6. ¿Lo utilizas para limpiar? ").strip().lower()
                         if respuesta == "si":
-                            print("Estás pensando en ropa.")
+                            print("Es un objeto de Limpieza.")
                         else:
-                            print("Estás pensando en una herramienta o utensilio.")
+                            respuesta = input("7. ¿Se utiliza en el ámbito médico? ").strip().lower()
+                            if respuesta == "si":
+                                print("Es una Herramienta médica.")
+                            else:
+                                respuesta = input("8. ¿Te puedes transportar en él? ").strip().lower()
+                                if respuesta == "si":
+                                    print("Es un Medio de Transporte.")
+                                else:
+                                    respuesta = input("8. ¿Lo ocupas en la cocina? ").strip().lower()
+                            if respuesta == "si":
+                                    print("Es una herramienta de cocina (cuchillo, batidoras, etc).")
+                            else:
+                                respuesta = input("9. ¿Es un arma o instrumento de defensa? (espadas, misiles, equipamiento bélico) ").strip().lower()
+                    if respuesta == "si":
+                        print("Es un arma o equipo bélico!" if respuesta == "si" else "Es un herramienta de construcción")
+    
                 else:
-                    print("Estás pensando en un objeto físico menos común.")
-       
-       
-       #Rama de INTANGIBLES
+                    if respuesta == "si":
+                        respuesta = input("5. ¿Es un utencilio? ").strip().lower()
+                        if respuesta == "si":
+                            respuesta = input("6. ¿Lo ocupas en la oficina? ").strip().lower()
+                            if respuesta == "si":
+                                print("Es utencilio de oficina (boligrafo, pápel, lapiz, etc)")
+                            else:
+                                respuesta = input("7. ¿Lo ocupas en la cocina? ").strip().lower()
+                                if respuesta == "si":
+                                    print("Es utencilio de cocina (cuchara, plato, etc)")
+                                else:
+                                    respuesta = input("8. ¿Lo ocupas para limpar algo o limpiarte? ").strip().lower()
+                                    print("Es utencilio de limpieza" if respuesta == "si" else "Es un utincilio de jardinería")
+                    else:
+                        respuesta = input("9. ¿Es para el hogar o vestimenta? ").strip().lower()
+                        if respuesta == "si":
+                            respuesta = input("10. ¿Es un mueble? ").strip().lower()
+                            if respuesta == "si":
+                                print("Tu objeto es un Mueble (silla, mesa, cama)")
+                            else:
+                                respuesta = input("11. ¿Lo puede poner sobre algún objeto o persona? ").strip().lower()
+                                if respuesta == "si":
+                                    print("Tu objeto es una ropa, accesorio o ropa de cama")
+                                else: 
+                                    respuesta = input("12. ¿Lo ocupas para decorar? ").strip().lower()
+                                    if respuesta == "si":
+                                        print("Tu objeto es alguna decoración del hogar (cuadro, jarrón, lámpara)")
+                                    else:
+                                        print("Es un objeto de almacenamiento")
+                        else:
+                            respuesta = input("10. ¿Está relacionado con el entrenimiento o actividad física? ").strip().lower()
+                            if respuesta == "si":
+                                respuesta = input("11. ¿Lo ocupas en algún deporte? ").strip().lower()
+                                if respuesta == "si":
+                                    print("Tu objeto es Deportivo (balón, raqueta, pesas)")
+                                else:
+                                    respuesta = input("12. ¿El objeto produce notas músicales? ").strip().lower()
+                                    if respuesta == "si":
+                                        print("Tu objeto es un Instrumento Músical")
+                                    else:
+                                        print("Es un Juguete")
+                            else:
+                                respuesta = input("11. ¿Se podría considerar un Insumo? ").strip().lower()
+                                if respuesta == "si":
+                                    respuesta = input("12. ¿Se ocupa en construcciones? ").strip().lower()
+                                    print("Tu objeto es un material de construcción)")
+                                else:
+                                    if respuesta == "si":
+                                        respuesta = input("13. ¿Se ocupa para curar/tratar enfermedades/lesiones? ").strip().lower()
+                                        print("Tu objeto es un medicamento o un vendaje)")
+                                    else:
+                                        if respuesta == "si":
+                                            respuesta = input("13. ¿Se ocupa para limpiar superficies? ").strip().lower()
+                                            print("Tu objeto es un insumo de limpieza(Detergente, Limpiadores, etc.)" if respuesta == "si" else "Es un insumo de oficina")
         else:
- 
+            # Rama de INTANGIBLES
             respuesta = input("3. ¿Es intangible? ").strip().lower()
             if respuesta == "si":
                 respuesta = input("4. ¿Es creación humana? ").strip().lower()
@@ -142,7 +209,7 @@ def adivinar():
                     if respuesta == "si":
                         print("¡Es una festividad!")
                     else:
-                        #CONTENIDO DE ENTRETENIMIENTO
+                        # CONTENIDO DE ENTRETENIMIENTO
                         respuesta = input("6. ¿Es entretenimiento audiovisual? ").strip().lower()
                         if respuesta == "si":
                             respuesta = input("7. ¿Es de animación japonesa? ").strip().lower()
@@ -195,16 +262,16 @@ def adivinar():
                             if respuesta == "si":
                                 print("Estás pensando en un Fenómeno Climático (huracanes, terremotos).")
                             else:
-                                respuesta = input("8. ¿Puedes vacacionar, pasar el rato ahí ? ").strip().lower()
-                            if respuesta == "si":
-                                print("Estás pensando en un Lugar o País.")
-                            else: 
-                                respuesta = input("8. ¿Es una fuerza fundamental? ").strip().lower()
+                                respuesta = input("8. ¿Puedes vacacionar, pasar el rato ahí? ").strip().lower()
                                 if respuesta == "si":
-                                    print("Estás pensando en una Fuerza Natural (gravedad, magnetismo).")
-                                else:
-                                    respuesta = input("9. ¿Se manifiesta como vibración o pulsación? ").strip().lower()
-                                    print("Estás pensando en Ondas (sonoras, electromagnéticas, sísmicas)." if respuesta == "si" else "Estás pensando en una Forma de Energía (cinética, térmica).")
+                                    print("Estás pensando en un Lugar o País.")
+                                else: 
+                                    respuesta = input("8. ¿Es una fuerza fundamental? ").strip().lower()
+                                    if respuesta == "si":
+                                        print("Estás pensando en una Fuerza Natural (gravedad, magnetismo).")
+                                    else:
+                                        respuesta = input("9. ¿Se manifiesta como vibración o pulsación? ").strip().lower()
+                                        print("Estás pensando en Ondas (sonoras, electromagnéticas, sísmicas)." if respuesta == "si" else "Estás pensando en una Forma de Energía (cinética, térmica).")
                         else:
                             print("Estás pensando en un Fenómeno Extraterrestre (auroras boreales, lluvias de meteoros).")
 
