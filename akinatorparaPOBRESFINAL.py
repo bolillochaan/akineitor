@@ -118,7 +118,7 @@ def adivinar():
                             respuesta = input("6. ¿Es arte digital o realidad virtual? (hologramas, dispositivos VR) ").strip().lower()
                             print("¡Es arte digital o tecnología de realidad virtual!" if respuesta == "si" else "Es otro tipo de tecnología especializada")
             else:
-                respuesta = input("4. ¿Es una herramienta? ").strip().lower()
+                respuesta = input("4. ¿Es una herramienta? (Facilita un trabajo) ").strip().lower()
                 if respuesta == "si":
                     respuesta = input("5. ¿Lo utilizas en la oficina? ").strip().lower()
                     if respuesta == "si":
