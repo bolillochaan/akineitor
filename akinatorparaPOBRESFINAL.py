@@ -16,7 +16,7 @@ def adivinar():
                     if respuesta == "si":
                         print("Estás pensando en un ser humano.")
                     else:
-                        print("Estás pensando en otro mamífero.")
+                       
                         respuesta = input("6. ¿Es una mascota como un perro, un gato o un conejo? ").strip().lower()
                         if respuesta == "si":
                             respuesta = input("7. ¿Es un perro? ").strip().lower()
@@ -217,21 +217,20 @@ def adivinar():
                                             respuesta = input("13. ¿Se ocupa para limpiar superficies? ").strip().lower()
                                             print("Tu objeto es un insumo de limpieza(Detergente, Limpiadores, etc.)" if respuesta == "si" else "Es un insumo de oficina")
         else:
-            # Rama de INTANGIBLES
             respuesta = input("3. ¿Es intangible? ").strip().lower()
             if respuesta == "si":
-                respuesta = input("4. ¿Es creación humana? ").strip().lower()
-                if respuesta == "si":
-                    respuesta = input("5. ¿Es un acontecimiento? ").strip().lower()
+                    respuesta = input("4. ¿Es creación humana? ").strip().lower()
                     if respuesta == "si":
-                        print("¡Es una festividad!")
-                    else:
-                        # CONTENIDO DE ENTRETENIMIENTO
-                        respuesta = input("6. ¿Es entretenimiento audiovisual? ").strip().lower()
+                        respuesta = input("5. ¿Es un acontecimiento? ").strip().lower()
                         if respuesta == "si":
-                            respuesta = input("7. ¿Es de animación japonesa? ").strip().lower()
+                         print("¡Es una festividad!")
+                        elif respuesta == "no":
+                        # CONTENIDO DE ENTRETENIMIENTO
+                            respuesta = input("6. ¿Es entretenimiento audiovisual? ").strip().lower()
                             if respuesta == "si":
-                                print("¡Es un Anime!")
+                             respuesta = input("7. ¿Es de animación japonesa? ").strip().lower()
+                            if respuesta == "si":
+                                    print("¡Es un Anime!")
                             else:
                                 respuesta = input("8. ¿El contenido se divide en capítulos? ").strip().lower()
                                 print("¡Es una Serie!" if respuesta == "si" else "¡Es una Película!")
@@ -248,22 +247,22 @@ def adivinar():
                                     else:
                                         respuesta = input("10. ¿Es un sistema de inteligencia artificial? (redes neuronales, machine learning) ").strip().lower()
                                         print("¡Es inteligencia artificial!" if respuesta == "si" else "¡Es otra tecnología digital avanzada!")
-                            else:
-                                respuesta = input("8. ¿Es texto que narra alguna historia? ").strip().lower()
-                                print("¡Es un Libro, Novela u obra dramática!" if respuesta == "si" else "¡Es una Poesía!")  
-            else:
-                # Rama de materiales y fenómenos
-                respuesta = input("4. ¿Es un material? ").strip().lower()
-                if respuesta == "si":
-                    respuesta = input("5. ¿Es un Elemento? ").strip().lower()
-                    if respuesta == "si":
-                        respuesta = input("6. ¿Es de origen natural? ").strip().lower()
-                        if respuesta == "si":
-                            print("Elemento Natural (Ej: Oro Au, Oxígeno O)")
-                        else:
-                            print("Elemento Sintético (Ej: Plutonio Pu)")
+                                else:
+                                    respuesta = input("8. ¿Es texto que narra alguna historia? ").strip().lower()
+                                    print("¡Es un Libro, Novela u obra dramática!" if respuesta == "si" else "¡Es una Poesía!")  
                     else:
-                        respuesta = input("5. ¿Es compuesto? ").strip().lower()
+                # Rama de materiales y fenómenos
+                        respuesta = input("4. ¿Es un material? ").strip().lower()
+                    if respuesta == "si":
+                        respuesta = input("5. ¿Es un Elemento? ").strip().lower()
+                        if respuesta == "si":
+                                respuesta = input("6. ¿Es de origen natural? ").strip().lower()
+                                if respuesta == "si":
+                                    print("Elemento Natural (Ej: Oro Au, Oxígeno O)")
+                                else:
+                                    print("Elemento Sintético (Ej: Plutonio Pu)")
+                        else:
+                            respuesta = input("5. ¿Es compuesto? ").strip().lower()
                         if respuesta == "si":
                             respuesta = input("6. ¿Es orgánico? ").strip().lower()
                             print("Compuesto Orgánico" if respuesta == "si" else "Compuesto Inorgánico")
