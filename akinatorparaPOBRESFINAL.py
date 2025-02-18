@@ -273,19 +273,19 @@ def adivinar():
                                 print("Aleación metálica" if respuesta == "si" else "Mezcla homogénea")
                             else:
                                 print("Mezcla heterogénea o coloide")
-                else:
-                    respuesta = input("4. ¿Se obtiene de la tierra? ").strip().lower()
-                    if respuesta == "si":
-                        respuesta = input("5. ¿Se produce de manera artificial? ").strip().lower()
-                        print("Estás pensando en un Combustible." if respuesta == "si" else "Estás pensando en un Recurso Geológico (como minerales o rocas).")
                     else:
-                        respuesta = input("6. ¿Ocurre en la Tierra? ").strip().lower()
+                        respuesta = input("4. ¿Se obtiene de la tierra? ").strip().lower()
                         if respuesta == "si":
-                            respuesta = input("7. ¿Causa catástrofes naturales? ").strip().lower()
+                                respuesta = input("5. ¿Se produce de manera artificial? ").strip().lower()
+                                print("Estás pensando en un Combustible." if respuesta == "si" else "Estás pensando en un Recurso Geológico (como minerales o rocas).")
+                        else:
+                            respuesta = input("6. ¿Ocurre en la Tierra? ").strip().lower()
                             if respuesta == "si":
-                                print("Estás pensando en un Fenómeno Climático (huracanes, terremotos).")
-                            else:
-                                respuesta = input("8. ¿Puedes vacacionar, pasar el rato ahí? ").strip().lower()
+                                respuesta = input("7. ¿Causa catástrofes naturales? ").strip().lower()
+                                if respuesta == "si":
+                                    print("Estás pensando en un Fenómeno Climático (huracanes, terremotos).")
+                                else:
+                                    respuesta = input("8. ¿Puedes vacacionar, pasar el rato ahí? ").strip().lower()
                                 if respuesta == "si":
                                     print("Estás pensando en un Lugar o País.")
                                 else: 
@@ -295,9 +295,9 @@ def adivinar():
                                     else:
                                         respuesta = input("9. ¿Se manifiesta como vibración o pulsación? ").strip().lower()
                                         print("Estás pensando en Ondas (sonoras, electromagnéticas, sísmicas)." if respuesta == "si" else "Estás pensando en una Forma de Energía (cinética, térmica).")
-                        else:
+                            else:
                             # Sección de fenómenos extraterrestres
-                            respuesta = input("7. ¿Es un cuerpo celeste como un planeta? ").strip().lower()
+                                respuesta = input("7. ¿Es un cuerpo celeste como un planeta? ").strip().lower()
                             if respuesta == "si":
                                 print("¡Estás pensando en un planeta!")
                             else:
