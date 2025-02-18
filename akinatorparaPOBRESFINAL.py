@@ -2,7 +2,7 @@ def adivinar():
     print("¡Adivinaré lo que estás pensando! Pero modérate, tampoco exageres")
     print("Responde con 'si', 'no'.\n")
 
-    respuesta = input("1. ¿Es algo vivo? ").strip().lower()
+    respuesta = input("1. ¿Es un ser vivo o proviene de las plantas? ").strip().lower()
     
     if respuesta == "si":
         # Rama de seres vivos (sin cambios)
@@ -215,7 +215,11 @@ def adivinar():
                                     else:
                                         if respuesta == "si":
                                             respuesta = input("13. ¿Se ocupa para limpiar superficies? ").strip().lower()
-                                            print("Tu objeto es un insumo de limpieza(Detergente, Limpiadores, etc.)" if respuesta == "si" else "Es un insumo de oficina")
+                                            if respuesta == "si":
+                                                print("Tu objeto es un insumo de limpieza(Detergente, Limpiadores, etc.)" )
+                                            else:
+                                              respuesta = input("14. ¿Se ocupa para la cocina? ").strip().lower()
+                                            print("¡Es un insumo de cocina!" if respuesta == "si" else "¡Es un Insumo de Oficina!")
         else:
             respuesta = input("3. ¿Es intangible? ").strip().lower()
             if respuesta == "si":
